@@ -4,6 +4,7 @@
 		"vector": "cpp",
 		"utility": "cpp",
 		"iosfwd": "cpp",
-		"set": "cpp"
+		"set": "cpp",
+		"typeinfo": "cpp"
 	}
 }
