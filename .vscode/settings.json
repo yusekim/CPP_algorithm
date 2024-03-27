@@ -5,6 +5,9 @@
 		"utility": "cpp",
 		"iosfwd": "cpp",
 		"set": "cpp",
-		"typeinfo": "cpp"
+		"typeinfo": "cpp",
+		"ios": "cpp",
+		"iostream": "cpp",
+		"deque": "cpp"
 	}
 }
