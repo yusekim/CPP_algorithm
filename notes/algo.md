@@ -263,3 +263,60 @@ ___Reference___
 - Wikipedia: Greedy Algorithm [[Link](https://en.wikipedia.org/wiki/Greedy_algorithm)]
 - geeksforgeeks: Greedy Algorithm Tutorial [[Link](https://www.geeksforgeeks.org/introduction-to-greedy-algorithm-data-structures-and-algorithm-tutorials/)]
 ---
+## 12/30/2025. Binary Search Algorithm
+이분 탐색 알고리즘은 __정렬된 배열__ 내에서 반복적으로 탐색범위를 절반으로 줄여가며 값을 찾는 알고리즘이다. `O(log N)`의 시간복잡도를 가진다
+#### 이분 탐색의 과정
+1. 검색 공간을 절반(`left`, `right`)으로 나누어 중앙값을 찾는다
+2. 중앙값의 값을 찾고자 하는 값(`key value`)과 비교한다.
+3. 둘의 값이 같다면 탐색을 종료한다.
+4. 중앙값이 찾고자 하는 값과 다를 경우:
+    - 중앙값보다 키값이 작은 경우엔 다음 검색 범위를 `left`로 바꾼다
+    - 중앙값보다 키값이 클 경우엔 다음 검색 범위를 `right`로 바꾼다
+5. 탐색은 키값을 찾거나 검색 범위가 더 이상 존재하지 않을 때까지 반복된다.
+![binary search](./imgs/Binary_search.gif)
+
+```c++
+// C++ program to implement iterative Binary Search
+#include <bits/stdc++.h>
+using namespace std;
+
+// An iterative binary search function.
+int binarySearch(int arr[], int low, int high, int x)
+{
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        // Check if x is present at mid
+        if (arr[mid] == x)
+            return mid;
+
+        // If x greater, ignore left half
+        if (arr[mid] < x)
+            low = mid + 1;
+
+        // If x is smaller, ignore right half
+        else
+            high = mid - 1;
+    }
+
+    // If we reach here, then element was not present
+    return -1;
+}
+
+// Driver code
+int main(void)
+{
+    int arr[] = { 2, 3, 4, 10, 40 };
+    int x = 10;
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int result = binarySearch(arr, 0, n - 1, x);
+    if(result == -1) cout << "Element is not present in array";
+    else cout << "Element is present at index " << result;
+    return 0;
+}
+```
+
+___Reference___
+- Wikipedia: Binary search [[Link](https://en.wikipedia.org/wiki/Binary_search)]
+- geeksforgeeks: Binary Search Algorithm [[Link](https://www.geeksforgeeks.org/binary-search/)]
+---
