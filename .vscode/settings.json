@@ -51,6 +51,7 @@
 		"streambuf": "cpp",
 		"tuple": "cpp",
 		"variant": "cpp",
-		"algorithm": "cpp"
+		"algorithm": "cpp",
+		"memory": "cpp"
 	}
 }
