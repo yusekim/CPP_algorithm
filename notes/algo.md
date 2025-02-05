@@ -179,7 +179,7 @@ ___Reference___
 
 ---
 
-## 12/16/2025. Heap data structure and max/min heap
+## 12/16/2024. Heap data structure and max/min heap
 ### 힙? Heap?
 힙 자료구조는 __힙의 속성(heap property)__ 을 만족하는 __완전 이진 트리(complete binary tree)__ 이다.
 #### 완전? 이진? 트리? Complete? binary? tree?
@@ -223,7 +223,7 @@ ___Reference___
 - Programiz: Tree Data Structure [[Link](https://www.programiz.com/dsa/trees)]
 - Programiz: Binary Tree [[Link](https://www.programiz.com/dsa/binary-tree)]
 ---
-## 12/28/2025. Greedy Algorithms
+## 12/28/2024. Greedy Algorithms
 탐욕(greddy) 알고리즘은 문제를 해결하기 위해 결정해야하는 여러 선택의 순간순간마다 최선의 선택을 함으로서 문제를 해결한 방법이 최선의 방법일 것이라는 기대에서 시작한다.
 
 ### 탐욕 알고리즘이 적용되는 문제들의 특징
@@ -263,7 +263,7 @@ ___Reference___
 - Wikipedia: Greedy Algorithm [[Link](https://en.wikipedia.org/wiki/Greedy_algorithm)]
 - geeksforgeeks: Greedy Algorithm Tutorial [[Link](https://www.geeksforgeeks.org/introduction-to-greedy-algorithm-data-structures-and-algorithm-tutorials/)]
 ---
-## 12/30/2025. Binary Search Algorithm
+## 12/30/2024. Binary Search Algorithm
 이분 탐색 알고리즘은 __정렬된 배열__ 내에서 반복적으로 탐색범위를 절반으로 줄여가며 값을 찾는 알고리즘이다. `O(log N)`의 시간복잡도를 가진다
 #### 이분 탐색의 과정
 1. 검색 공간을 절반(`left`, `right`)으로 나누어 중앙값을 찾는다
@@ -320,3 +320,7 @@ ___Reference___
 - Wikipedia: Binary search [[Link](https://en.wikipedia.org/wiki/Binary_search)]
 - geeksforgeeks: Binary Search Algorithm [[Link](https://www.geeksforgeeks.org/binary-search/)]
 ---
+
+## 02/3/2025 Backtracking
+백트래킹 기법은 점진적으로 다른 선택지를 시도하고, 막다른 길에 도달하면 **이전 선택지로 되돌아가서 다른 선택**을 함으로서 문제를 해결하는 알고리즘이다.
+미로에서 경로를 찾거나 스토쿠를 푸는 등 여러 가능성을 탐색해야 하는 상황에서 일반적으로 사용된다.
