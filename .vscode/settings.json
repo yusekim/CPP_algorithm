@@ -52,6 +52,7 @@
 		"tuple": "cpp",
 		"variant": "cpp",
 		"algorithm": "cpp",
-		"memory": "cpp"
+		"memory": "cpp",
+		"__config": "cpp"
 	}
 }
