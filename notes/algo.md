@@ -8,7 +8,7 @@
 ___DFS, BFS 모두 그래프를 탐색하는 방법이다.___
 
 ### 너비 우선 탐색(BFS, Breadth First Search)
-시작 노드에서 가장 가까운 거리상의 노드들을 전부 탐색한 뒤, 그 다음으로 가까운 거리에 위치한 노드들을 탐색하는 기법. BFS는 __다익스트라알고리즘(Dijkstra's shortest path)__, __위상정렬 알고리즘(Kahn's Algorithm)__ 그리고 __프림 알고리즘(Prim's algorithm)__ 의 기반이 되었다.
+시작 노드에서 가장 가까운 거리상의 노드들을 전부 탐색한 뒤, 그 다음으로 가까운 거리에 위치한 노드들을 탐색하는 기법. BFS는 __다익스트라알고리즘([[dijkstra]] algorithm)__, __위상정렬 알고리즘(Kahn's algorithm)__ 그리고 __프림 알고리즘(Prim's algorithm)__ 의 기반이 되었다.
 BFS는 방향/무방향 그래프 내 순환의 유무, 가중치가 없는 그래프에서의 최단 거리를 찾는 등 많은 문제에서 활용된다.
 
 __BFS는 다음의 단계를 통해 주어진 그래프를 탐색한다:__
@@ -17,7 +17,7 @@ __BFS는 다음의 단계를 통해 주어진 그래프를 탐색한다:__
 3. 큐에 기록된 순서대로 이웃된 각 노드들에 대해 단계 1,2의 방법으로 탐색을 진행한다.
 4. 그래프의 모든 노드가 표시될때까지 탐색을 진행한다.
 
-![bfs step by step](./imgs/bfs.gif)
+![bfs step by step](bfs.gif)
 
 ```c++
 // C++ program for BFS
@@ -106,7 +106,7 @@ __DFS는 다음의 단계를 통해 주어진 그래프를 탐색한다:__
     - 이때 스택 자료구조를 활용하여 탐색할 노드를 추적한다.
 6. 그래프의 모든 노드가 표시(탐색 완료)될때까지 탐색을 진행한다.
 
-![dfs step by step](./imgs/dfs.gif)
+![dfs step by step](dfs.gif)
 ```c++
 // C++ program for DFS
 #include <bits/stdc++.h>
@@ -185,7 +185,7 @@ ___Reference___
 #### 완전? 이진? 트리? Complete? binary? tree?
 _먼저, 트리 자료구조부터 알아보자_
 #### 트리 자료구조 Tree data structure
-![Tree data structure](./imgs/tree_data_structure.webp)
+![Tree data structure](tree_data_structure.webp)
 트리는 `노드(nodes)`와 `간선(edges)`로 연결된 비선형 계층적 자료구조이다. 모든 트리는 `루트 노드(Root node)`에서 시작되며, `부모(Parent) 노드`와 `자식(Child) 노드`가 존재한다. `Tree`는 `Graph`의 특수한 형태 중 하나이며, 둘의 구조상 차이는 다음과 같다
 
 | __특징__               | __Tree (트리)__                        | __Graph (그래프)__                       |
@@ -199,18 +199,18 @@ _먼저, 트리 자료구조부터 알아보자_
 #### 이진 트리와 그 종류들 Binary tree and its types
 이진 트리 자료구조는 부모 노드가 최대 2개의 자식 노드만을 가질 수 있는 트리 자료 구조이다. 이진 트리는 여러 속성과 규칙 하에 다양한 유형으로 분류될 수 있다.
 - __Full__: 모든 노드에 2개 또는 0개의 자식 노드가 있는 형태의 트리
-![Full_binaray_tree](./imgs/full-binary-tree.webp)
+![Full_binaray_tree](full-binary-tree.webp)
 - __Complete__: 마지막 계층을 제외한 모든 계층이 완전한(2개의 자식 노드)이고, 마지막 계층의 노드들은 왼쪽에서 오른쪽으로 채워지는 형태의 트리
-![complete_binaray_tree](./imgs/complete-binary-tree.webp)
+![complete_binaray_tree](complete-binary-tree.webp)
 - __Perfect__: 마지막 계층을 제외한 모든 계층이 꽉 찬 상태(2개의 자식 노드)이고 최하층의 노드들이 모두 같은 계층에 위치한 형태의 트리
-![perfect_binaray_tree](./imgs/perfect-binary-tree.webp)
+![perfect_binaray_tree](perfect-binary-tree.webp)
 
 ### 힙 자료구조 Heap Data structure
 다시 한번 힙에 대한 정의를 보자, 힙 자료구조는 __힙의 속성(heap property)__ 을 만족하는 __완전 이진 트리(complete binary tree)__ 이다. 여기서 힙의 속성은 모든 노드에 대해 동일하게 적용된다.
 - __최대 힙 속성 max heap property__: 본인 노드에 저장된 데이터값이 자식 노드보다 항상 크다. 즉 `root node`에 저장된 값은 다른 모든 노드의 값보다 더 큰 값을 가지고 있다.
-![max heap](./imgs/maxheap.png)
+![max heap](maxheap.png)
 - __최소 힙 속성 min heap property__: 본인 노드에 저장된 데이터값이 자식 노드보다 항상 작다. 즉 `root node`에 저장된 값은 다른 모든 노드의 값보다 더 작은 값을 가지고 있다.
-![min heap](./imgs/minheap.png)
+![min heap](minheap.png)
 
 #### 힙 자료구조의 활용처
 - __힙 정렬__: 제한적인 메모리 공간에서 일정한 성능을 보여줌 `O(nlogn)`
@@ -273,7 +273,7 @@ ___Reference___
     - 중앙값보다 키값이 작은 경우엔 다음 검색 범위를 `left`로 바꾼다
     - 중앙값보다 키값이 클 경우엔 다음 검색 범위를 `right`로 바꾼다
 5. 탐색은 키값을 찾거나 검색 범위가 더 이상 존재하지 않을 때까지 반복된다.
-![binary search](./imgs/Binary_search.gif)
+![binary search](Binary_search.gif)
 
 ```c++
 // C++ program to implement iterative Binary Search
