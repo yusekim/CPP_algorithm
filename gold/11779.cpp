@@ -7,7 +7,7 @@ vector<vector<pair<int, int>>> routes(1001);
 vector<pair<int, int>> dist(1001, pair<int, int>{INF, 0});
 int n, m, start, dest;
 
-void dijkstra(int start, int dest)
+void dijkstra(int start)
 {
 	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 	pq.push({0, start});
@@ -44,7 +44,7 @@ int main()
 		routes[u].push_back({w, v});
 	}
 	cin >> start >> dest;
-	dijkstra(start, dest);
+	dijkstra(start);
 	cout << dist[dest].first << '\n';
 	vector<int> res(1, dest);
 	while (dest != start)
