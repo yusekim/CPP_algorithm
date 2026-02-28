@@ -5,7 +5,6 @@ using namespace std;
 const int INF = 1e9;
 int N, M, res = INF;
 vector<vector<int>> map;
-vector<pair<int, int>> walls;
 
 void bfs()
 {
