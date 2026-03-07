@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include <cstring>
 using namespace std;
 int R, C, T, idx, nidx, ap = 0, res = 0;
